@@ -43,6 +43,6 @@ CI/CD is awesome and deserves an adapted workflow. The **unstable branch** acts 
 
 ## Credits
 
-This workflow was created and implemented at Lymeo a French IT company. The main contributors being **Cortney Knorr** and **Antoine Murcia**.
+This workflow was created and implemented by Lymeo a French IT company. The main contributors being **Cortney Knorr** and **Antoine Murcia**.
 
 
