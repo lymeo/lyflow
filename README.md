@@ -12,12 +12,15 @@ Lyflow is a gitlab workflow adapted to CI/CD, agile and cloud automation.
 ### Ephemeral branches
 
 1. **feature branches**, named ```feature/[feature name]``` (example: ```feature/logo-animations```) are branches used to add features to the project. They are created from the latest **unstable branch** and are merged (squashed) back into the **unstable branch** when finished. These branches can be deleted when finished but only once the **unstable branch** has been merged into the **develop branch**, often at the end of a cycle.
+
 ![feature](https://raw.githubusercontent.com/lymeo/lyflow/master/feature.png)
 
 2. **integration branches**, named ```integration/[cycle name]``` are used to integrate a group of features into the software. They are created from the latest **unstable branch** and are merged (squashed) back into the **unstable branch** when finished. On the **integration branches** minor changes and final adjustements are made so that, once merged, the **unstable branch** is ready to be, in turn, merged (actually rebased) onto the **develop branch**. This branch is deleted after the merge (well the rebase).
+
 ![integration](https://raw.githubusercontent.com/lymeo/lyflow/master/integration.png)
 
 3. **release branches**, named ```release/[release name]``` are branches used to package features into a release and prepare them for the release. This branch stems from the **develop branch** where it is squashed back into when finished. It is deleted after being merged.
+
 ![release](https://raw.githubusercontent.com/lymeo/lyflow/master/release.png)
 
 ### Illustration
