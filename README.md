@@ -1,25 +1,25 @@
 # Lyflow
-Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
+Lyflow est un workflow git adapté aux Chaînes d'Intégration/Chaînes de Déploiement, à la méthodoligie agile et l'automatisation cloud.
 
-## Basic principles
+## Principes de base
 
-### Three main branches
+### Trois branches principales
 
-1. **master**, contains the software's stable releases.
-2. **develop**, this branch contains the latest features. It often contains versions of the software that are not yet finished or ready to be released and in agile terms contains the **latest deliverable**
-3. **unstable**, this branch contains the latest features but unlike the **develop branch** these features might have broken others and are just generaly waiting for all functional conflicts and adjustements to be added. In extremely rare ocasions changes can be made on this branch directly when feature branches are deemed to be overkill. In agile terms this branch contains the ongoing sprint's user stories.
+1. **master**, qui contient les "releases" stables du software.
+2. **develop**, qui contient les dernières fonctionnalitées. Elle dispose souvent de versions du software qui ne sont pas encore terminées ou prêtes à être envoyé sur master. En termes agile elle contient **le dernier deliverable**
+3. **unstable**, cette branche contient les dernières fonctionnalitées mais contrairement à la **branche develop** ces fonctionnalités peuvent avoir créé des conflits avec d'autres fonctionnalitées et sont en attente d'un correctif. Dans de rare cas certains changements peuvent être appliqués directement sur cette branche lorsque la création d'une branche "feature" est considéré comme de l'overkill. En termes agile cette branche contient les **user stories du sprint en cours.**
 
-### Ephemeral branches
+### Branches éphémères
 
-1. **feature branches**, named ```feature/[feature name]``` (example: ```feature/logo-animations```) are branches used to add features to the project. They are created from the latest **unstable branch** and are merged (squashed) back into the **unstable branch** when finished. These branches can be deleted when finished but only once the **unstable branch** has been merged into the **develop branch**, often at the end of a cycle.
+1. **Les branches feature**, nommées ```feature/[nom de la feature]``` (example: ```feature/logo-animations```) sont des branches utilisées pour ajouter des fonctionnalitées au projet. Elle sont créées à partir de la dernière **branche unstable** et sont fusionnées (merge squash) à la **branche unstable** une fois terminées. Ces branches peuvent être supprimées une fois finies mais seulement une fois que la **branche unstable** a été fusionné à la **branche develop**, souvent à la fin d'un cycle.
 
 ![feature](https://raw.githubusercontent.com/lymeo/lyflow/master/feature.png)
 
-2. **integration branches**, named ```integration/[cycle name]``` are used to integrate a group of features into the software. They are created from the latest **unstable branch** and are merged (squashed) back into the **unstable branch** when finished. On the **integration branches** minor changes and final adjustements are made so that, once merged, the **unstable branch** is ready to be, in turn, merged (actually rebased) onto the **develop branch**. This branch is deleted after the merge (well the rebase).
+2. **Les branches integration**, nommées ```integration/[nom du cycle]``` sont utilisées pour intégrer un groupe de fonctionnalitées dans le software. Elles sont créées à partir de la dernière **branche unstable** et sont fusionnées (merge squash) à la **branche unstable** une fois terminées. Dans les **branches integration**  des changements mineurs et des ajustements finaux sont faits pour, qu'une fois fusionnée, la **branche unstable** est prête, à terme, à être fusionnée (ou plutôt "rebase") avec la **branche develop**. Cette branche est supprimée apès la fusion (le "rebase").
 
 ![integration](https://raw.githubusercontent.com/lymeo/lyflow/master/integration.png)
 
-3. **release branches**, named ```release/[release name]``` are branches used to package features into a release and prepare them for the release. This branch stems from the **develop branch** where it is squashed back into when finished. It is deleted after being merged.
+3. **les branches release**, nommées ```release/[nom de la release]``` sont des branches utilisées pour grouper un ensemble de fonctionnalités en une "release". Cette branche est issue de la **branche develop** dans laquelle elle est fusionnée (merge squash) une fois terminée, après quoi elle sera supprimée.
 
 ![release](https://raw.githubusercontent.com/lymeo/lyflow/master/release.png)
 
@@ -27,22 +27,22 @@ Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
 
 ![Full illustration](https://raw.githubusercontent.com/lymeo/lyflow/master/full.png)
 
-## Use cases
+## Cas d'usage
 
-### ~~Small projects~~
-This workflow is not adapted to small projects in the same sense full scrum compliant management is not.
+### ~~Petits projets~~
+Ce workflow n'est pas adapté aux petits projets tout comme une gestion de conformitée "full scrum management" ne l'est pas.
 
-### Scrum and deliverables
-> Scrum and agile even though being referenced multiple times in this documentation is not a requirement. 
+### Scrum et deliverables
+> Les méthodes "Scrum" et "agile", même étant citées plusieurs fois dans cette documentation, ne sont pas requises. 
 
-The **unstable branch** is perfectly adapted to manage the ongoing user stories. Once the sprint is finished all those user stories are added to the **develop branch** using rebase. By rebasing we insure a clean history, on the **developement branch**, containing all the different user stories leading up to the latest deliverable. The latest deliverable is alway's available on the **develop branch** and the latest release on the **master branch**.
+La **branche unstable** est parfaitement adaptée à la gestion de "user stories" en cours. Une fois le sprint terminé toutes ces "user stories" sont ajoutées à la **branche develop** via "rebase". En utilisant "rebase" on s'assure un historique propre sur la **branche develop** contenant les différentes "user stories" menants au dernier "deliverable". Le dernier "deliverable" est toujours disponible sur la **branche develop** et la dernière "release" sur la  **branche master**.
 
 ### CI/CD
 
-CI/CD is awesome and deserves an adapted workflow. The **unstable branch** acts as a buffer and enables the continuous deployment of the **develop branch**. Continuously deploying the **develop branch** enables you to have a demo, or develop version to be deployed, that you have better control other. Adding to this clean seperation is the possibility to do testing and automation on the **unstable branch**, for example: continuously testing the **unstable branch** and reporting to the developper.
+Les CI/CD sont géniales et mérites un workflow adapté. La **branche unstable** agit en tant que buffer et permet le déploiement continu de la **branche develop**. Déployer de manière continue la **branche develop** vous permet d'avoir une démo, ou une version "develop" déployable, sur laquelle vous avez un meilleur contrôle. Ajoutez à cela une séparation propre et vous avez la possibilitée de faire du testing et de automatisation sur la **branche unstable**. Par example vous pouvez tester continuellement la **branche unstable** et faire des rapports aux developpers.
 
-## Credits
+## Crédits
 
-This workflow was created and implemented by Lymeo a French IT company. The main contributors being **Cortney Knorr** and **Antoine Murcia**.
+Ce workflow a été créé et implementé par Lymeo une entreprise informatique française. Les contributeurs principaux étants **Cortney Knorr** et **Antoine Murcia**.
 
 
