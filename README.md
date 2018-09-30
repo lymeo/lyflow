@@ -1,5 +1,6 @@
 # Lyflow
 Lyflow est un workflow git adapté aux Chaînes d'Intégration/Chaînes de Déploiement, à la méthodologie agile et l'automatisation cloud.
+
 ![Full illustration](https://raw.githubusercontent.com/lymeo/lyflow/master/full.png)
 
 ## Principes de base
