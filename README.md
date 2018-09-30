@@ -1,6 +1,8 @@
 # Lyflow
 Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
 
+![Full illustration](https://raw.githubusercontent.com/lymeo/lyflow/master/full.png)
+
 ## Basic principles
 
 ### Three main branches
@@ -23,7 +25,7 @@ Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
 
 ![release](https://raw.githubusercontent.com/lymeo/lyflow/master/release.png)
 
-### Illustration
+### Overview
 
 ![Full illustration](https://raw.githubusercontent.com/lymeo/lyflow/master/full.png)
 
