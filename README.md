@@ -29,7 +29,17 @@ Lyflow is a gitlab workflow adapted to CI/CD, agile and cloud automation.
 
 ## Use cases
 
->> Needs content
+### ~~Small projects~~
+This workflow is not adapted to small projects in the same sense full scrum compliant management is not.
+
+### Scrum and deliverables
+> Scrum and agile even though being referenced multiple times in this documentation is not a requirement. 
+
+The **unstable branch** is perfectly adapted to manage the ongoing user stories. Once the sprint is finished all those user stories are added to the **develop branch** using rebase. By rebasing we insure a clean history, on the **developement branch**, containing all the different user stories leading up to the latest deliverable. The latest deliverable is alway's available on the **develop branch** and the latest release on the **master branch**.
+
+### CI/CD
+
+INFO NEEDED
 
 ## Credits
 
