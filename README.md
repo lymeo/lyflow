@@ -1,5 +1,5 @@
 # Lyflow
-Lyflow is a gitlab workflow adapted to CI/CD, agile and cloud automation.
+Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
 
 ## Basic principles
 
