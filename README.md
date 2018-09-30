@@ -32,7 +32,7 @@ Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
 ## Use cases
 
 ### ~~Small projects~~
-This workflow is not adapted to small projects in the same sense full scrum compliant management is not.
+This workflow is not adapted to small projects in the same way full scrum compliant management is not.
 
 ### Scrum and deliverables
 > Scrum and agile even though being referenced multiple times in this documentation is not a requirement. 
