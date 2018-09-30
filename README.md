@@ -39,7 +39,7 @@ The **unstable branch** is perfectly adapted to manage the ongoing user stories.
 
 ### CI/CD
 
-INFO NEEDED
+CI/CD is awesome and deserves an adapted workflow. The **unstable branch** acts as a buffer and enables the continuous deployment of the **develop branch**. Continuously deploying the **develop branch** enables you to have a demo, or develop version to be deployed, that you have better control other. Adding to this clean seperation is the possibility to do testing and automation on the **unstable branch**, for example: continuously testing the **unstable branch** and reporting to the developper.
 
 ## Credits
 
