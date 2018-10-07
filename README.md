@@ -8,8 +8,8 @@ Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
 ### Three main branches
 
 1. **master**, contains the software's stable releases.
-2. **develop**, this branch contains the latest features. It often contains versions of the software that are not yet finished or ready to be released and in agile terms contains the **latest deliverable**
-3. **unstable**, this branch contains the latest features but unlike the **develop branch** these features might have broken others and are just generaly waiting for all functional conflicts and adjustements to be added. In extremely rare ocasions changes can be made on this branch directly when feature branches are deemed to be overkill. In agile terms this branch contains the ongoing sprint's user stories.
+2. **develop**, this branch contains the latest features. It often contains versions of the software that are not yet finished or ready to be released and in agile terms contains the **latest deliverable**.
+3. **unstable**, this branch contains the latest features but unlike the **develop branch** these features might have caused malfunctions in other features and are just generaly waiting for all functional conflicts and adjustements to be added. In extremely rare ocasions changes can be made on this branch directly when feature branches are deemed to be overkill. In agile terms this branch contains the ongoing sprint's user stories.
 
 ### Ephemeral branches
 
