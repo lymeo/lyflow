@@ -45,10 +45,10 @@ The **unstable branch** is perfectly adapted to manage the ongoing user stories.
 
 ### CI/CD
 
-CI/CD has revolutionised releasing software to end users and deserves an adapted workflow. The **unstable branch** acts as a buffer and enables the continuous deployment of the **develop branch**. Continuously deploying the **develop branch** enables you to have a deployable demo, or develop version and maintaining better control during the process. Adding to this clean seperation is the possibility to do testing and automation on the **unstable branch**, for example: continuously testing the **unstable branch** and reporting to the developper.
+CI/CD has revolutionised releasing software to end users and deserves an adapted workflow. The **unstable branch** acts as a buffer and enables the continuous deployment of the **develop branch**. Continuously deploying the **develop branch** enables teams to have a deployable demo, or develop version, all the while maintaining better control during the process. Adding to this clean separation is the possibility for testing and automation on the **unstable branch**, for example, continuously testing the **unstable branch** and reporting to the team.
 
 ## Credits
 
-This workflow was created and implemented by Lymeo a French IT company. The main contributors being **Cortney Knorr** and **Antoine Murcia**.
+This workflow was created and implemented by Lymeo, a French IT company. The main contributors being **Cortney Knorr** and **Antoine Murcia**.
 
 
