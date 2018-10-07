@@ -17,11 +17,11 @@ Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
 
 ![feature](https://raw.githubusercontent.com/lymeo/lyflow/master/feature.png)
 
-2. **integration branches**, named ```integration/[cycle name]``` are used to integrate a group of features into the software. They are created from the latest **unstable branch** and are merged (squashed) back into the **unstable branch** when finished. On the **integration branches** minor changes and final adjustements are made so that, once merged, the **unstable branch** is ready to be, in turn, merged (actually rebased) onto the **develop branch**. This branch is deleted after the merge (well the rebase).
+2. **integration branches**, named ```integration/[cycle name]``` are used to integrate a group of features into the software. They are created from the latest **unstable branch** and are merged (squashed) back into the **unstable branch** when finished. On the **integration branches** minor changes and final adjustments are made so that, once merged, the **unstable branch** is ready to be, in turn, merged (actually rebased) onto the **develop branch**. This branch is deleted after the merge (actually the rebase).
 
 ![integration](https://raw.githubusercontent.com/lymeo/lyflow/master/integration.png)
 
-3. **release branches**, named ```release/[release name]``` are branches used to package features into a release and prepare them for the release. This branch stems from the **develop branch** where it is squashed back into when finished. It is deleted after being merged.
+3. **release branches**, named ```release/[release name]``` are branches used to package features into a release and prepare them for the release. This branch stems from the **develop branch** into which it is squashed back when finished. This release branch is deleted after being merged.
 
 ![release](https://raw.githubusercontent.com/lymeo/lyflow/master/release.png)
 
@@ -36,16 +36,16 @@ In a similar way to the Gitflow workflow, Lyflow allows Hotfix branches but reco
 ## Use cases
 
 ### ~~Small projects~~
-This workflow is not adapted to small projects in the same way full scrum compliant management is not.
+This workflow is not adapted to small projects in the same way full Scrum compliant management is not.
 
 ### Scrum and deliverables
-> Scrum and agile even though being referenced multiple times in this documentation is not a requirement. 
+> Scrum and agile even though being referenced multiple times in this documentation are not a requirement. 
 
-The **unstable branch** is perfectly adapted to manage the ongoing user stories. Once the sprint is finished all those user stories are added to the **develop branch** using rebase. By rebasing we insure a clean history, on the **developement branch**, containing all the different user stories leading up to the latest deliverable. The latest deliverable is alway's available on the **develop branch** and the latest release on the **master branch**.
+The **unstable branch** is perfectly adapted to manage the ongoing user stories. Once the sprint is finished all those user stories are added to the **develop branch** using rebase. By rebasing we insure a clean history, on the **develop branch**, containing all the different user stories leading up to the latest deliverable. The latest deliverable is always available on the **develop branch** and the latest release on the **master branch**.
 
 ### CI/CD
 
-CI/CD is awesome and deserves an adapted workflow. The **unstable branch** acts as a buffer and enables the continuous deployment of the **develop branch**. Continuously deploying the **develop branch** enables you to have a deployable demo, or develop version and maintaining better control during the process. Adding to this clean seperation is the possibility to do testing and automation on the **unstable branch**, for example: continuously testing the **unstable branch** and reporting to the developper.
+CI/CD has revolutionised releasing software to end users and deserves an adapted workflow. The **unstable branch** acts as a buffer and enables the continuous deployment of the **develop branch**. Continuously deploying the **develop branch** enables you to have a deployable demo, or develop version and maintaining better control during the process. Adding to this clean seperation is the possibility to do testing and automation on the **unstable branch**, for example: continuously testing the **unstable branch** and reporting to the developper.
 
 ## Credits
 
