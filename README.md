@@ -61,6 +61,8 @@ This workflow is not adapted to small projects in the same way full Scrum compli
 
 The **unstable branch** is perfectly adapted to manage the ongoing user stories. Once the sprint is finished all those user stories are added to the **develop branch** using rebase. By rebasing we insure a clean history, on the **develop branch**, containing all the different user stories leading up to the latest deliverable. The latest deliverable is always available on the **develop branch** and the latest release on the **master branch**.
 
+> In the case of the advanced variation the **unstable branch** can be used during the sprint review to show the deliverable. If the product owner discards features or the need arises, you can do so using the **intgration branch** to filter the desired features.
+
 ### CI/CD
 
 CI/CD has revolutionised releasing software to end users and deserves an adapted workflow. The **unstable branch** acts as a buffer and enables the continuous deployment of the **develop branch**. Continuously deploying the **develop branch** enables teams to have a deployable demo, or develop version, all the while maintaining better control during the process. Adding to this clean separation is the possibility for testing and automation on the **unstable branch**, for example, continuously testing the **unstable branch** and reporting to the team.
