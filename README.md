@@ -21,7 +21,7 @@ Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
 
 ![integration](https://raw.githubusercontent.com/lymeo/lyflow/master/integration.png)
 
-3. **release branches**, named ```release/[release name]``` are branches used to package features into a release and prepare them for the release. This branch stems from the **develop branch** into which it is squashed back when finished. This release branch is deleted after being merged.
+3. **release branches**, named ```release/[release name]``` are branches used to package features into a release and prepare them for the release. This branch stems from the **develop branch** into which it is squashed back when finished. This release branch is deleted after being merged but only after merging it into the **unstable branch** to avoid later conflicts.
 
 ![release](https://raw.githubusercontent.com/lymeo/lyflow/master/release.png)
 
