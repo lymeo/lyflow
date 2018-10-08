@@ -21,6 +21,8 @@ Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
 
 ![integration](https://raw.githubusercontent.com/lymeo/lyflow/master/integration.png)
 
+> An advanced alternative is described in the "Advanced variation" section
+
 3. **release branches**, named ```release/[release name]``` are branches used to package features into a release and prepare them for the release. This branch stems from the **develop branch** into which it is squashed back when finished. This release branch is deleted after being merged into the **unstable branch** to avoid later conflicts between **develop and unstable**.
 
 ![release](https://raw.githubusercontent.com/lymeo/lyflow/master/release.png)
@@ -34,6 +36,20 @@ Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
 In a similar way to the Gitflow workflow, Lyflow allows Hotfix branches but recommends implementation only when necessary on the **develop and master branch**. 
 
 > This branch is merged squashed into the **develop branch** and **unstable branch** to avoid conflicts
+
+## Advanced variation
+
+This advanced alternative enables you to choose which features will be finally integrated to the develop branch at the end of a cycle.
+
+### Differences
+
+The only change is made to the **integration branch**. In this variation the **integration branch** stems of the **develop branch** and filters the desired features/user stories from the **unstable branch** by cherry picking them (in the case all features are desired simply rebase the **unstable branch** onto the **integration branch**). The **unstable branch** is then deleted or renamed. 
+
+The next step is to rebase the **integration branch** onto the **develop branch** and finnally recreating the **unstable branch** from the resulting **develop branch**.
+
+### Variation overview
+
+![Full illustration](https://raw.githubusercontent.com/lymeo/lyflow/master/variation.full.png)
 
 ## Use cases
 
