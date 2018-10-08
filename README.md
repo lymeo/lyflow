@@ -33,6 +33,8 @@ Lyflow is a git workflow adapted to CI/CD, agile and cloud automation.
 
 In a similar way to the Gitflow workflow, Lyflow allows Hotfix branches but recommends implementation only when necessary on the **develop and master branch**. 
 
+> This branch is merged squashed into the **develop branch** and **unstable branch** to avoid conflicts
+
 ## Use cases
 
 ### ~~Small projects~~
